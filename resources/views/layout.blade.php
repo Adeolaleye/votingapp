@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/img/logo.png') }}">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
   <title>
     @yield('title')
   </title>
@@ -26,12 +26,23 @@
   <!-- Navbar -->
   <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
     <div class="container">
-      <a class="navbar-brand mr-lg-8" href="index.html">
+      <a class="navbar-brand mr-lg-8" href="/">
         <img src="{{ asset('assets/img/logo.png')}}">
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a href="https://sgtv.tv/" class="navbar-toggler btn-neutral" target="_blank">
+        <span class="nav-link-inner--text">LATEST NEWS</span>
+      </a>
+      @auth
+            <a class="btn-neutral navbar-toggler btn-icon" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+              LOGOUT
+            </a>
+  
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
+                @csrf
+                
+            </form> 
+      @endauth
       <div class="navbar-collapse collapse" id="navbar_global">
         <div class="navbar-collapse-header">
           <div class="row">
@@ -50,13 +61,13 @@
         </div>
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
           <li class="nav-item d-none d-lg-block ml-lg-4">
-            <a href="#" target="_blank" class="btn btn-neutral btn-icon">
+            <a href="https://sgtv.tv/" target="_blank" class="btn btn-neutral btn-icon">
               <span class="nav-link-inner--text">Latest News</span>
             </a>
             @auth
             <a class="btn btn-neutral btn-icon" href="{{ route('logout') }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-              <i class="fa fa-sign-out"></i>Logout
+                LOGOUT
             </a>
   
              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none">
@@ -78,16 +89,16 @@
         <div class="row align-items-center justify-content-md-between">
           <div class="col-md-6">
             <div class="copyright">
-              &copy; 2020 <a href="" target="_blank">SGTV</a>.
+              &copy; 2020 <a href="https://sgtv.tv/" target="_blank">SGTV</a> Made by <a href="https://twitter.com/adeolaleye_" target="_blank">Addy</a>
             </div>
           </div>
           <div class="col-md-6">
             <ul class="nav nav-footer justify-content-end">
               <li class="nav-item">
-                <a href="" class="nav-link" target="_blank">Latest News</a>
+                <a href="https://sgtv.tv/" class="nav-link" target="_blank">Latest News</a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link" target="_blank">About Us</a>
+                <a href="https://sgtv.tv/about-us/" class="nav-link" target="_blank">About Us</a>
               </li>
             </ul>
           </div>

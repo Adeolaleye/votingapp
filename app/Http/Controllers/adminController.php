@@ -18,14 +18,18 @@ class adminController extends Controller
         $conts = contestantcat::with('contestants')->get();
         $categories_count = contestantcat::all()->count();
         $nominess_count = contestant::all()->count();
-        $voters_count = Ip::all()->count();
+        $vote_count = Ip::all()->count();
+        $voters_count = Ip::distinct()->count(['ip']);
         $counter = 1;
+       
+        
 
         return view('admin.dashboard', [
             'conts' => $conts,
             'categories_count' => $categories_count,
             'nominess_count' => $nominess_count,
             'voters_count' => $voters_count,
+            'vote_count' => $vote_count,
             'counter' => $counter,
         ]);
     

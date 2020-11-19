@@ -3,7 +3,7 @@
 @section ('content')
     <section class="section-profile-cover section-shaped my-0" style="height: 275px">
       <!-- Circles background -->
-      <img class="bg-image" src="{{ asset ('assets/img/pages/mohamed.jpg') }}" style="width: 100%;">
+      <img class="bg-image" src="{{ asset ('assets/img/dashboard.jpg') }}" style="width: 100%;">
     </section>
     <section class="section bg-secondary">
       <div class="container">

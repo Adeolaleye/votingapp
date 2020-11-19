@@ -36,8 +36,8 @@
         <div class="py-3 mb-3 border-bottom text-center">
             <div class="row justify-content-center">
               <div class="col-lg-9">
-                <p>An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. An artist of considerable range.</p>
-                <a href="http://sgtv.tv/">Show more</a>
+                <p>In view of the pivotal role of the Media in National development and in realization of her core objectives, the stardom Global Award Series, an Sgtv Hall of Fame recognition hope to identify excellence, innovation, competition achievement of Nigerians in all walls of Life and celebrate some in a yearly grand style award and induction of outstanding achievers into the Sgtv Hall of Fame. This is to promote culture of excellence performance and patriotism in public service.</p>
+                <a href="https://sgtv.tv/" target="_black">Learn more</a>
               </div>
             </div>
           </div>

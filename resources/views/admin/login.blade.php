@@ -35,6 +35,7 @@
       <span></span>
       <span></span>
     </div>
+  </section>
     <div class="container pt-lg-7">
       <div class="row justify-content-center">
         <div class="col-lg-5">
@@ -72,7 +73,6 @@
         </div>
       </div>
     </div>
-  </section>
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
   <script src="assets/js/core/popper.min.js" type="text/javascript"></script>

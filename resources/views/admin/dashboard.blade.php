@@ -3,7 +3,7 @@
 @section ('content')
     <section class="section-profile-cover section-shaped my-0">
       <!-- Circles background -->
-      <img class="bg-image" src="{{ asset ('assets/img/pages/mohamed.jpg') }}" style="width: 100%;">
+      <img class="bg-image" src="{{ asset ('assets/img/dashboard.jpg') }}" style="width: 100%;">
     </section>
     <section class="section bg-secondary">
       <div class="container">
@@ -43,7 +43,7 @@
             <div class="text-center mt-6">
               <div class="h6 font-weight-300"><i class="ni location_pin mr-2"></i>Welcome Admin</div>
               <h2><strong>Voting Result</strong></h2>
-              {{-- <span class="font-weight-light">,</span> --}}
+              <span class="font-weight-light">Total number of votes are {{ $vote_count }}</span>
             </div>
             <hr>
             <div class="row">

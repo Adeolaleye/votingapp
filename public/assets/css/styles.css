@@ -460,7 +460,8 @@ h6,
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.3;
+  margin-top: 15px;
 }
 .display-5 {
   font-size: 1rem;
@@ -4834,12 +4835,14 @@ input[type="button"].btn-block {
 }
 
 .navbar-toggler {
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 0.0625rem solid transparent;
-  border-radius: 0.25rem;
+  background-color: #ffffff;
+  border: 0.3rem solid #ffffff;
+  padding: 0.4rem 0.5rem;
+  color: #7d057f !important;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: 0.3rem;
 }
 
 .navbar-toggler:hover,
@@ -20874,16 +20877,25 @@ textarea[resize="horizontal"] {
 }
 
 .section-profile-cover {
-  height: 450px;
+  height: 400px;
   background-size: cover;
   background-position: center center;
 }
 
 @media (max-width: 991.98px) {
   .section-profile-cover {
-    height: 400px;
+    height: 196px;
   }
 }
+
+@media (max-width: 600px) {
+  .display-1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+    }
+}
+
 
 .section-components>.form-control+.form-control {
   margin-top: .5rem;
@@ -24339,9 +24351,9 @@ pre>code.highlight {
   bottom: 0;
 }
 .sub-title {
-  font-size:20px; 
+  font-size:17px; 
   font-weight:400; 
-  letter-spacing:2px; 
+  letter-spacing:1px; 
   color:#b5b6b7;
 }
 #overlay {
