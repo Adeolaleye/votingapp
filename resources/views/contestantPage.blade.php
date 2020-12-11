@@ -19,7 +19,7 @@
     </div>
 </div>
 <div class="section features-6">
-    <div class="container">
+    <div class="container">  
         <form class="" method="POST" action="{{ route('vote4contestant') }}">
             <div class="row">
                 @if(session()->get('error'))
