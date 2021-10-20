@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Contestant;
 use App\contestantcat;
 use App\Ip;
+use App\booksit;
 use Illuminate\Http\Request;
 
 class adminController extends Controller
@@ -21,8 +22,8 @@ class adminController extends Controller
         $vote_count = Ip::all()->count();
         $voters_count = Ip::distinct()->count(['ip']);
         $counter = 1;
-       
-        
+        $bookedsits = booksit::all();
+        $bookedsits_count = booksit::all()->count();
 
         return view('admin.dashboard', [
             'conts' => $conts,
@@ -31,6 +32,8 @@ class adminController extends Controller
             'voters_count' => $voters_count,
             'vote_count' => $vote_count,
             'counter' => $counter,
+            'bookedsits' => $bookedsits,
+            'bookedsits_count' => $bookedsits_count,
         ]);
     
     }

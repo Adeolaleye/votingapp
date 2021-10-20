@@ -10,6 +10,6 @@ class contestantcat extends Model
     protected $guarded = [];
     
     public function contestants(){
-        return $this->hasMany(Contestant::Class);
+        return $this->hasMany(Contestant::class);
     }
 }

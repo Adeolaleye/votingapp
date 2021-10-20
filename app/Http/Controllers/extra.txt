@@ -40,15 +40,14 @@ class ReserveController extends Controller
                 'phone' => 'required|numeric',
             ]);
         //Get all ips for this category
-        $bookasit = booksit::whereIps($_SERVER['REMOTE_ADDR'])->first();
+        $ip_check = booksit::whereIps($_SERVER['REMOTE_ADDR'])->count();
         
         //if incoming ip matches with stored, abort, else continue
-        if( $bookasit){
-            return view('bookings.ticket', [
-                'bookasit' => $bookasit,
-            ]);
-        }
-        $highest = booksit::max('id');
+        if($ip_check > 0){
+            return back()->with('error', 'You are not allowed to book for sit Twice');
+            }
+
+         $highest = booksit::max('id');
         $new_number = $highest += 1;
         $sitno = sprintf("%'.03d\n", $new_number);
 

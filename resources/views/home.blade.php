@@ -65,17 +65,22 @@
             <div class="col-lg-12">
                 <h2 class="title display-3 text-center">Categories</h2>
             </div>
-            @foreach ($contestantCat as $contestant)
-            <div class="col-lg-6">
-                <div class="info info-horizontal info-hover-primary card shadow m-4">
-                    <div class="description p-4">
-                        <p class="text-center">{{$contestant->contestantcategories}}</p>
-                        <a href="{{ route('contestant.show', $contestant->id) }}"
-                            class="btn btn-primary mb-4 mt-4 center">Click to vote</a>
+            @if ($counter > 0)
+                @foreach ($contestantCat as $contestant)
+                <div class="col-lg-6">
+                    <div class="info info-horizontal info-hover-primary card shadow m-4">
+                        <div class="description p-4">
+                            <p class="text-center">{{$contestant->contestantcategories}}</p>
+                            <a href="{{ route('contestant.show', $contestant->id) }}"
+                                class="btn btn-primary mb-4 mt-4 center">Click to vote</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            @endforeach
+                @endforeach 
+            @endif
+            @if ($counter == 0)
+                <p>No Contestant Available</p>
+            @endif
         </div>
     </div>
 </div>
@@ -120,7 +125,7 @@
  * GLOBAL VARS
  * -------------------------- */
 // The date you want to count down to
-var targetDate = new Date("2020/11/30 00:00:00");   
+var targetDate = new Date("2021/11/30 00:00:00");   
 
 // Other date related variables
 var days;

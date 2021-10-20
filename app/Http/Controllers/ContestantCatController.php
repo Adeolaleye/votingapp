@@ -24,9 +24,11 @@ class ContestantCatController extends Controller
         
         // dd($_SERVER['SERVER_SOFTWARE']);
         $contestant = contestantcat::all();
+        $counter = $contestant->count();
         // 
         return view('home', [
             'contestantCat' => $contestant,
+            'counter' => $counter,
         
         ]);
         

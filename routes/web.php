@@ -24,8 +24,9 @@ Route::get('vote', function() {
 Route::resource('contestant', 'ContestantCatController');
 Route::Post('votecontestant', 'ContestantCatController@vote')->name('vote4contestant');
 Route::view('feedback','admin.login'); 
-Route::resource('book-a-sit','ReserveController');
-Route::Post('book-a-sit', 'ReserveController@store')->name('ticket');
+Route::resource('sitreservation','ReserveController');
+Route::Post('sitreservation', 'ReserveController@store')->name('ticket');
+//Route::view('yourticket','bookings.ticket');
 
 Auth::routes();
 Route::middleware(['auth'])->group (function() {

@@ -20,6 +20,11 @@
   <link href="{{ asset('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="{{ asset('assets/css/styles.css')}}" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  
+  <link href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" type="stylesheet">
+
+  
 </head>
 
 <body class="landing-page">
@@ -107,7 +112,7 @@
     </footer>
   </div>
   <!--   Core JS Files   -->
-  {{-- <script src="{{ asset('assets/js/core/jquery.min.js') }}" type="text/javascript"></script> --}}
+  <script src="{{ asset('assets/js/core/jquery.min.js') }}" type="text/javascript"></script>
   <script src="{{ asset('assets/js/core/popper.min.js') }}" type="text/javascript"></script>
   <script src="{{ asset('assets/js/core/bootstrap.min.js') }}" type="text/javascript"></script>
   <script src="{{ asset('assets/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
@@ -116,8 +121,9 @@
   <script src="{{ asset('assets/js/plugins/moment.min.js') }}"></script>
   <script src="{{ asset('assets/js/plugins/datetimepicker.js') }}" type="text/javascript"></script>
   <script src="{{ asset('assets/js/plugins/bootstrap-datepicker.min.js') }}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <script src="{{ asset('assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript') }}"></script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
@@ -126,6 +132,9 @@
         token: "ee6fab19c5a04ac1a32a645abde4613a",
         application: "argon-design-system-pro"
       });
+      $(document).ready(function() {
+    $('#example').DataTable();
+      } );
   </script>
 </body>
 </html>

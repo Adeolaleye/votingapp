@@ -36,7 +36,7 @@
                     <p><a href="result">Back To Result</a></p>
                     </div>
                     @csrf
-                  </form>
+                </form>
               </div>
             </div>
           </div>
